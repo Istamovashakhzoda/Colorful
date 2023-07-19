@@ -1,0 +1,137 @@
+*{
+    padding: 0;
+    margin: 0 auto;
+}
+
+body {
+	background-color: Snow;
+}
+
+#container {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+button {
+	width: 120px;
+	height: 120px;
+	border-radius: 999px;
+	border: none;
+	z-index: 4;
+	transition: all 0.2s cubic-bezier(0.38, 0.25, 0.47, 0.57);
+}
+
+/* Picker button */
+button:hover {
+	cursor: pointer;
+	background-color: whitesmoke;
+	box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08);
+}
+
+button:active {
+	background-color: #f1f1f1;
+}
+
+.swatches {
+	transform: translate(-50px, -375px);
+	border: 1px solid black;
+}
+
+/* Swatch */
+.swatch {
+	position: absolute;
+	display: flex;
+	flex-direction: column-reverse;
+	height: 300px;
+	width: 100px;
+	transform-origin: bottom center;
+	transition-function: cubic-bezier(0.38, 0.25, 0.47, 0.87);
+	transition-delay: 0.75s;
+}
+
+.mini-swatch {
+	height: 0%;
+	width: 100px;
+	transition: border-color 0.1s cubic-bezier(0.38, 0.25, 0.47, 0.87);
+	transition: height 1s cubic-bezier(0.38, 0.25, 0.47, 0.87);
+	box-sizing: border-box;
+	z-index: 2;
+	cursor: pointer;
+}
+
+.mini-swatch::before {
+	width: 100%;
+	height: 75px;
+	position: absolute;
+	color: black;
+	content: attr(id);
+}
+
+.mini-swatch--open {
+	height: 100% !important;
+	transition: height 1s cubic-bezier(0.38, 0.25, 0.47, 0.87) 0.5s !important;
+}
+
+input {
+	display: none;
+}
+
+.mini-swatch label {
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 75px;
+  box-sizing: border-box;
+  border: 1px solid #ffffff00;
+  transition: all 0.2s cubic-bezier(0.38, 0.25, 0.47, 0.87);
+}
+
+.mini-swatch label:hover {
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.24);
+  border: 1px solid #ffffff64; 
+	cursor: pointer;
+}
+
+#r.swatch {
+	transition-duration: 0.2s;
+}
+#ro.swatch {
+	transition-duration: 0.3s;
+}
+#o.swatch {
+	transition-duration: 0.4s;
+}
+#yo.swatch {
+	transition-duration: 0.5s;
+}
+#y.swatch {
+	transition-duration: 0.6s;
+}
+#yg.swatch {
+	transition-duration: 0.7s;
+}
+#g.swatch {
+	transition-duration: 0.8s;
+}
+#bg.swatch {
+	transition-duration: 0.9s;
+}
+#b.swatch {
+	transition-duration: 1s;
+}
+#bi.swatch {
+	transition-duration: 1.1s;
+}
+#i.swatch {
+	transition-duration: 1.2s;
+}
+#vi.swatch {
+	transition-duration: 1.3s;
+}
+#v.swatch {
+	transition-duration: 1.4s;
+}
